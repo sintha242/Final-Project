@@ -2,7 +2,7 @@
 /* 1152; 1024 */
 
 .page {
-    backgroud: black;
+    /* backgroud: black; */
     /* margin:auto; */
     /* display:block; */
 }
@@ -24,7 +24,7 @@
     margin:0;
     display:flex;
 }
-.arrow {
+.arrow-left, .arrow-right {
     /* background:red; */
     margin:0px;
     padding-left: 54px;
@@ -32,7 +32,6 @@
     display: flex;
     max-height: 720px;
     border: thin 1px grey;
-
 }
 
 #arrow-right{
@@ -44,13 +43,15 @@
     margin:0px; 
     bottom: 0px;
     width: 1024px;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 
 h1 {
     margin:0px;
+    color:white;
 }
 h2 {
     margin:0px;
+    color:white;
 }
