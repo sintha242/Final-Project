@@ -32,16 +32,31 @@ let data1 = {
   let currentPhoto = 0;
 
   let imagesData = [data1,data2,data3,data4,data5,data6]
+  let imageArray = [data1.image,data2.image,data3.image,data4.image,data5.image, data6.image]
 
   $('#image').attr('src', imagesData[currentPhoto].image);
   $('#image-title').text(imagesData[currentPhoto].title);
   $('#image-description').text(imagesData[currentPhoto].description);
+  $('#tn1').attr('src',imageArray[0]);
+  $('#tn2').attr('src',imageArray[1]);
+  $('#tn3').attr('src',imageArray[2]);
+  $('#tn4').attr('src',imageArray[3]);
+  $('#tn5').attr('src',imageArray[4]);
+  $('#tn6').attr('src',imageArray[5]);
 
   let loadImage = (photoNumber) => {
     $('#image').attr('src', imagesData[photoNumber].image);
-    $('#image-title').text(imagesData[currentPhoto].title);
-    $('#image-description').text(imagesData[currentPhoto].description);
+    $('#image-title').text(imagesData[photoNumber].title);
+    $('#image-description').text(imagesData[photoNumber].description);
+    $('#tn1').attr('src',imageArray[0]);
+    $('#tn2').attr('src',imageArray[1]);
+    $('#tn3').attr('src',imageArray[2]);
+    $('#tn4').attr('src',imageArray[3]);
+    $('#tn5').attr('src',imageArray[4]);
+    $('#tn6').attr('src',imageArray[5]);
+    // $(".thumbnails").addClass('selected');
   }
+
 
 $('.arrow-right').click(() => {
   if(currentPhoto < 5)
@@ -49,16 +64,40 @@ $('.arrow-right').click(() => {
   else if (currentPhoto === 5)
   currentPhoto = 0;
   loadImage(currentPhoto);
+  $('#promenna').text(currentPhoto);
 })
 
 $('.arrow-left').click(() => {
   if(currentPhoto > 0)
   currentPhoto--;
   else if (currentPhoto === 0)
-  currentPhoto = 5;       //  Načte poslední řádek 
+  currentPhoto = 5;       //  Načte poslední řádek
+  $('.selected').removeClass('selected');
+  $(".thumbnail-box"[currentPhoto]).addClass('selected');
   loadImage(currentPhoto);
+  $('#promenna').text(currentPhoto);
 })
 
-// loadImage(currentPhoto);
+// $('#tn1').attr('src',imageArray[0]);
+// $('#tn2').attr('src',imageArray[1]);
+// $('#tn3').attr('src',imageArray[2]);
+// $('#tn4').attr('src',imageArray[3]);
+// $('#tn5').attr('src',imageArray[4]);
+// $('#tn6').attr('src',imageArray[5]);
+
+
+
+  
+
+// imageArray.forEach((pic) => {
+// $('.thumbnails',).attr('src',pic);
+// });         // Tohle by mělo být správně, ale nefunguje. Asi není dobře připojené HTLM.
+
+
+
+
+// $('.thumbnails').attr('src',imageArray[0])
+
+// // loadImage(currentPhoto);
 
 

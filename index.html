@@ -10,20 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="page">
-        <div class="middle-area">
-            <div class="arrow-left"><img src="images/arrow.svg" id="arrow-left"></div>
-            <div class="main-pic" >
-                <img id="image">
-                <div class="headlines">
-                    <h1 id="image-title"></h1>
-                    <h2 id="image-description"></h2>
-                </div>
-            </div>
-            <div class="arrow-right"><img src="images/arrow.svg" id="arrow-right"></div>
+<div class="content">
+    <div class="middle-area">
+        <div class="arrow-left"><img src="images/arrow.svg" id="arrow-left"></div>
+        <div class="main-pic" >
+            <img id="image">
+            <div class="headlines">
+            <h1 id="image-title"></h1>
+            <h2 id="image-description"></h2>
+        </div>
     </div>
-    </div>  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <div class="arrow-right"><img src="images/arrow.svg" id="arrow-right"></div>
+    </div>
+    <div class="thumbnail-box">
+        <img class="thumbnails" id="tn1" data-index="0"><div class="title"></div>
+        <img class="thumbnails" id="tn2" data-index="1">
+        <img class="thumbnails" id="tn3" data-index="2">
+        <img class="thumbnails" id="tn4" data-index="3">
+        <img class="thumbnails" id="tn5" data-index="4">
+        <img class="thumbnails" id="tn6" data-index="5">
+        <p id="clicked">0</p>
+        <p id="promenna">0</p>
+    </div>
+</div>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
